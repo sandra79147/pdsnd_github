@@ -3,6 +3,12 @@ import pandas as pd
 import numpy as np
 import datetime as dt
 
+
+"""
+Statistics and analysis about rideshare data for several cities
+Author: Sandra Rudnicka
+"""
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
