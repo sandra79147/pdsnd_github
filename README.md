@@ -1,11 +1,8 @@
-### Date created
-Include the date you created this project and README file.
-
-### Project Title
-Replace the Project Title
+### Udacity Bikeshare Project.
+Created 18.05.2020
 
 ### Description
-Describe what your project is about and what it does
+The project contains basic statistics and analysis about rideshare data for several cities - New York City, Washington and Chicago.
 
 ### Files used
 Include the files used
