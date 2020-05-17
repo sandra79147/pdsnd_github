@@ -7,14 +7,6 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-name_of_months ={"january":1,"february":2,
-                    "march":3,"april":4,"may":5,
-                    "june":6}
-
-name_of_day = {"monday":1,"tuesday":2,
-                   "wednesday":3,"thursday":4,
-                   "friday":5,"saturday":6,"sunday":7}
-
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -63,6 +55,13 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
+    name_of_months ={"january":1,"february":2,
+                    "march":3,"april":4,"may":5,
+                    "june":6}
+
+    name_of_day = {"monday":1,"tuesday":2,
+                   "wednesday":3,"thursday":4,
+                   "friday":5,"saturday":6,"sunday":7}
     
     keys = CITY_DATA.keys()
 
