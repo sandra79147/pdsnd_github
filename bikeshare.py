@@ -98,13 +98,13 @@ def time_stats(df):
             "friday","saturday","sunday"]
     
     count = df.groupby('month')["month"].count().sort_values(ascending=False).index[0]
-    print("The most popular month is:",months[count-1].capitalize())
+    print("The most popular month is: {}".format(months[count-1].capitalize()))
     
     count = df.groupby('day')["day"].count().sort_values(ascending=False).index[0]
-    print("The most popular day of week is:",days[count-1].capitalize())
+    print("The most popular day of week is: {}".format(days[count-1].capitalize()))
  
     count = df.groupby('hour')["hour"].count().sort_values(ascending=False).index[0]
-    print("The most popular hour is:",count)
+    print("The most popular hour is: {}".format(count))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -117,14 +117,14 @@ def station_stats(df):
     start_time = time.time()
 
     sstation = df.groupby('Start Station')["Start Station"].count().sort_values(ascending=False).index[0]
-    print("Most commonly used start station is: ",sstation)
+    print("Most commonly used start station is: {}".format(sstation))
 
     estation = df.groupby('End Station')["End Station"].count().sort_values(ascending=False).index[0]
-    print("Most commonly used end station is: ",estation)
+    print("Most commonly used end station is: {}".format(estation))
 
     df["Combine station"] = df["Start Station"] +"-" + df["End Station"]
     cstation = df.groupby('Combine station')["Combine station"].count().sort_values(ascending=False).index[0]
-    print("Most frequent combination of start station and end station trip is: ",cstation)
+    print("Most frequent combination of start station and end station trip is: {}".format(cstation))
     
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -156,11 +156,11 @@ def user_stats(df):
     print(df['User Type'].value_counts())
 
     try:
-        print("Counts of gender:",df['Gender'].value_counts())
-        print("Earliest year of birth: ",df["Birth Year"].max())
-        print("Most recent year of birth: ",df["Birth Year"].min())
+        print("Counts of gender: {}".format(df['Gender'].value_counts()))
+        print("Earliest year of birth: {}".format(df["Birth Year"].max()))
+        print("Most recent year of birth: {}".format(df["Birth Year"].min()))
         year = df.groupby('Birth Year')["Birth Year"].count().sort_values(ascending=False).index[0]
-        print("Most common year of birth is: ",year)
+        print("Most common year of birth is: {}".format(year))
     except:
         print("No data about gender or year of birth")
         
